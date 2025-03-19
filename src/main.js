@@ -27,7 +27,7 @@ const DOMDataFunction = (animalData) => {
     for (let animal of animalData) {
         text += `
         <div class="p-4 lg:w-1/3 animal-card">
-            <a  class="group relative block overflow-hidden">
+            <a  class="group relative block overflow-hidden rounded-3xl">
               <img
                 src="${animal.image}" 
                 alt="${animal.breed}"
@@ -61,21 +61,8 @@ const DOMDataFunction = (animalData) => {
         console.error("Element with id 'cards-row' not found");
     }
 
-    // Add event listener after the DOM is updated
-    // document.querySelectorAll(".choose-me-button").forEach(button => {
-    //     button.addEventListener("click", (event) => {
-    //         my_modal_1.showModal(); // Trigger the modal
-    //         const target = event.currentTarget; // Get clicked button
-    //         document.getElementById("pets-name").value = target.dataset.name;
-    //         document.getElementById("modal-breed").textContent = target.dataset.breed;
-    //         document.getElementById("modal-age").textContent = target.dataset.age;
-    //         document.getElementById("modal-description").textContent = target.dataset.description;
-    //         document.getElementById("modal-image").src = target.dataset.image;
 
-    //     });
-    // });
-
-    // Add event listener to dynamically set modal content
+    // Added event listener to dynamically set modal content
     document.querySelectorAll(".choose-me-button").forEach(button => {
         button.addEventListener("click", (event) => {
             const card = event.currentTarget.closest(".animal-card"); // Find the closest parent card
@@ -99,3 +86,28 @@ const DOMDataFunction = (animalData) => {
 };
 
 
+document.getElementById("submit-btn").addEventListener("click", () => {
+    // Fetch all input fields using getElementById
+    const username = document.getElementById("username");
+    const emailAddress = document.getElementById("emailAddress");
+    const phone = document.getElementById("phone");
+    const address = document.getElementById("address");
+
+    // Store inputs in an array for easy iteration
+    const inputs = [
+        { element: username},
+        { element: emailAddress},
+        { element: phone},
+        { element: address}
+    ];
+
+    // Loop through each input and check if it's empty
+    inputs.forEach(input => {
+        if (input.element.value.trim() === "") {
+            input.element.className = "block w-full px-4 py-2 mt-2 text-gray-700 bg-white border-2 border-red-500 rounded-md dark:bg-gray-800 dark:text-gray-300  focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" // Highlight border in red
+        } else {
+            input.element.classList.remove("border-red-500"); // Remove red border if filled
+        }
+    });
+
+})
