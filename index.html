@@ -10,7 +10,7 @@
     <div class="w-full relative flex justify-center items-center ">
       <img class="w-[100vw] h-[70vh] object-cover" src="src/images/header-image.webp" alt="">
       <div class="text-container absolute">
-        <h1 class="text-center text-black font-bold mb-8">Find Your Perfect <br> Companion</h1>
+        <h1 class="text-center text-white font-bold mb-8">Find Your Perfect <br> Companion</h1>
         <h3 class="text-center">Every pet deserves a loving home. Browse our adoption gallery and <br> give a furry friend their forever family today.</h3>
       </div>
     </div>
@@ -64,8 +64,27 @@
 
     <!-- // model section  -->
     <section>
-      <dialog id="my_modal_1" class="modal">
+      <dialog id="my_modal_1" class="modal">  
         <div class="modal-box bg-white">
+          <div id="success-msg" class="hidden w-full overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800">
+            <div class="flex items-center justify-center w-12 bg-emerald-500">
+                <svg class="w-6 h-6 text-white fill-current" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 3.33331C10.8 3.33331 3.33337 10.8 3.33337 20C3.33337 29.2 10.8 36.6666 20 36.6666C29.2 36.6666 36.6667 29.2 36.6667 20C36.6667 10.8 29.2 3.33331 20 3.33331ZM16.6667 28.3333L8.33337 20L10.6834 17.65L16.6667 23.6166L29.3167 10.9666L31.6667 13.3333L16.6667 28.3333Z" />
+                </svg>
+            </div>
+        
+            <div class="px-4 py-2 -mx-3">
+                <div class="mx-3">
+                    <span class="font-semibold text-emerald-500 dark:text-emerald-400">Success!</span>
+                    <p class="text-sm text-gray-600 dark:text-gray-200">Thank you for adopting a new friends!</p>
+                </div>
+            </div>
+        </div>
+        
+          <div class="text-center my-6">
+            <h2 id="pet-heading" class="text-3xl font-bold text-gray-900"></h2>
+            <p id="pet-subHeading" class="text-gray-500"></p>
+          </div>        
           <div class="grid grid-cols-1 gap-6 mt-4 sm:grid-cols-2">
             <div>
                 <label class="text-black" for="username">Your name</label>
@@ -109,7 +128,8 @@
             </div>
           
 
-
+            
+            
             
         </div>
         <div class="mt-2">
@@ -125,7 +145,7 @@
                 Cancel
               </button>
 
-              <span id="submit-btn" class="bg-gray-800 px-[19px] py-[9.6px] w-full text-[17px] mt-2  font-medium tracking-wide text-gray-700 capitalize transition-colors duration-300 transform border border-gray-200 rounded-md sm:mt-0 sm:w-auto sm:mx-2 dark:text-gray-200 dark:border-gray-700 dark:hover:bg-gray-800 hover:bg-gray-100 focus:outline-none focus:ring focus:ring-gray-300 focus:ring-opacity-40">
+              <span id="submit-btn" class="cursor-pointer bg-gray-800 px-[19px] py-[9.6px] w-full text-[17px] mt-2  font-medium tracking-wide text-gray-700 capitalize transition-colors duration-300 transform border border-gray-200 rounded-md sm:mt-0 sm:w-auto sm:mx-2 dark:text-gray-200 dark:border-gray-700 dark:hover:bg-gray-800 hover:bg-gray-100 focus:outline-none focus:ring focus:ring-gray-300 focus:ring-opacity-40">
                 Submit adoption
               </span>
 
@@ -133,6 +153,22 @@
           </div>
         </div>
       </dialog>
+    </section>
+
+    <!-- Adopted animals section  -->
+    <section>
+      <hr>
+      <div class="text-center my-6">
+        <h2 class="text-3xl font-bold text-white">Recently Adopted</h2>
+        <p class="text-white">Meet the pets who found their forever homes</p>
+      </div>
+      <div id="">
+        <div class="container w-[85%] px-5 py-24 mx-auto">
+          <div id="data-section" class="flex flex-wrap -m-4">
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
   <script type="module" src="src/main.js"></script>
   <!-- <script src="//unpkg.com/alpinejs" defer></script> -->
