@@ -17,8 +17,14 @@
   </header>
   <main>
     <section class="text-gray-600 body-font">
+      <div class="flex justify-center mt-10 gap-3">
+        <img class="object-cover" width="35" height="35" src="src/images/pet-leg-white.webp" alt="">
+        <h2 class="text-2xl text-white font-bold">Available for Adoption</h2>
+      </div>
+      <p class="text-white text-center">Choose an animal to adopt and give them a forever home</p>
+      
       <div class="container w-[85%] px-5 py-24 mx-auto">
-        <div class="flex flex-wrap -m-4">
+        <div id="cards-row" class="flex flex-wrap -m-4">
           <!-- new card  -->
           <div class="p-4 lg:w-1/3">
             <a href="#" class="group relative block overflow-hidden">
@@ -31,6 +37,37 @@
             
               <div class="relative border border-gray-100 bg-white p-6 cursor-auto">
                 <div class="flex justify-between">
+                  <span id="breed-name" class="bg-gray-500 py-1 px-2 text-white rounded">Dog</span>
+                  <span id="age" class="text-gray-700">2 Years</span>
+                </div>
+            
+                <h3 id="animal-name" class="mt-1.5 text-lg font-medium text-gray-900">Dog Name</h3>
+            
+                <p id="animal-description" class="mt-1.5 line-clamp-3 text-gray-700">
+                  A friendly and energetic German Shepherd who loves to play fetch and go for long walks.
+                </p>
+            
+                <form class="mt-4 flex gap-4">
+                  <div class="cursor-pointer hover:bg-gray-300 transition duration-400 flex border-2 border-gray-300 p-2 rounded-full items-center w-full justify-center">
+                    <img class="" width="25" src="src/images/pet-leg-icon.webp" alt="">
+                    <p class="ms-[20px] text-black">Choose Me</p>
+                  </div>
+                </form>
+              </div>
+            </a>
+          </div>
+          <!-- new card  -->
+          <div class="p-4 lg:w-1/3">
+            <a href="#" class="group relative block overflow-hidden">
+            
+              <img
+                src="https://images.unsplash.com/photo-1628202926206-c63a34b1618f?q=80&w=2574&auto=format&fit=crop"
+                alt=""
+                class="h-64 w-full object-cover transition duration-500 group-hover:scale-105 sm:h-72"
+              />
+            
+              <div class="relative border border-gray-100 bg-white p-6">
+                <div class="flex justify-between">
                   <span class="bg-gray-500 py-1 px-2 text-white rounded">Dog</span>
                   <span class="text-gray-700">2 Years</span>
                 </div>
@@ -42,7 +79,7 @@
                 </p>
             
                 <form class="mt-4 flex gap-4">
-                  <div class="cursor-pointer hover:bg-gray-300 flex border-2 border-gray-300 p-2 rounded-full items-center w-full justify-center">
+                  <div class="flex border-2 border-gray-300 p-2 rounded-full items-center w-full justify-center">
                     <img class="" width="25" src="src/images/pet-leg-icon.webp" alt="">
                     <p class="ms-[20px] text-black">Choose Me</p>
                   </div>
@@ -147,5 +184,6 @@
       </div>
     </section>
   </main>
+  <script type="module" src="src/main.js"></script>
 </body>
 </html>
